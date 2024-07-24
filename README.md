@@ -1,10 +1,10 @@
 # Tutorial basico de PyScript
 
 
-["PyScript Pagina"](https://pyscript.net/)
-["PyScript Documentación"](https://docs.pyscript.net/2024.7.1/beginning-pyscript/)
-["PyScript Ejemplos"](https://pyscript.com/@examples)
-["PyScript comunidad"](https://discord.com/invite/HxvBtukrg2)
+1. ["PyScript Pagina"](https://pyscript.net/)
+2. ["PyScript Documentación"](https://docs.pyscript.net/2024.7.1/beginning-pyscript/)
+3. ["PyScript Ejemplos"](https://pyscript.com/@examples)
+4. ["PyScript comunidad"](https://discord.com/invite/HxvBtukrg2)
 
 
 ### Servir los archivos con un servidor HTTP
@@ -70,7 +70,9 @@
     </py-script>
 ```
 
-target: indica el id del elemento objetivo
-append: valor booleano, si su valor es true se agrega al contenido existen, si el valor es false reemplaza el contenido existente
+- `target`: 
+indica el id del elemento objetivo
+- `append`: 
+valor booleano, si su valor es true se agrega al contenido existen, si el valor es false reemplaza el contenido existente
 
 ![alt text](./img/image-1.png)
