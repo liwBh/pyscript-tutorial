@@ -64,9 +64,9 @@
 
     <py-script>
         display("Hello", target="output")
-        display("World!")
-        display("Wilfredo", append=True,target="output-2")
-        display("Costa Rica", append=False,target="output-3")
+        display("World!", append=True, target="output")
+        display("Wilfredo", append=True, target="output-2")
+        display("Costa Rica", append=False, target="output-3")
     </py-script>
 ```
 
