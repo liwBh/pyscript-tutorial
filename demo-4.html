@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width,initial-scale=1" />
+      <link rel="icon" href="./img/favicon.ico" />
+      <title>PyScript Demo 4</title>
+      <link rel="stylesheet" href="https://pyscript.net/releases/2022.12.1/pyscript.css">
+      <script type="module" src="https://pyscript.net/releases/2022.12.1/pyscript.js"></script>
+  </head>
+  <body>
+        <h1>Demo 4 - importar archivos.py con funciones</h1>
+
+        <p id="date"></p>
+
+        <py-config>
+
+            [[fetch]]
+            files = ['demo4.py'] 
+            from = "package/"                                                                                                                                                                                                                                                                             
+
+        </py-config>
+
+        <py-script>
+
+            from demo4 import demo4, hello_world, date, show_params,console_message
+
+            print(demo4())
+
+            hello_world()
+
+            date()
+
+            show_params("<h2>Tutorial</h2>")
+
+            console_message("Pura vida!")
+
+        </py-script>
+    
+  </body>
+</html>
+
+

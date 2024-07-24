@@ -12,7 +12,9 @@
   python3 -m http.server
 ```
 
-## Demo 1  PyScript 2022.12.1
+## PyScript 2022.12.1
+
+### Demo 1 - Insertar contenido
 
 - ["Video tutorial"](https://www.youtube.com/live/AcFSzDBNjkI?si=D7zMcmHQUlpwmYyh)
 - ["Guia del tutorial"](https://jeff.glass/post/whats-new-pyscript-2022-12-1/)
@@ -76,3 +78,107 @@ indica el id del elemento objetivo
 valor booleano, si su valor es true se agrega al contenido existen, si el valor es false reemplaza el contenido existente
 
 ![alt text](./img/image-1.png)
+
+### Demo 2 - py-terminal
+
+- utilizar py-terminal
+```
+        <h1>Demo 2 - py-terminal</h1>
+
+        <py-config>
+        </py-config>
+
+        <py-script>
+          print("Hello world!")
+          print("My name is Wilfredo.")
+        </py-script>
+```
+`display()` es para escribir en la pantalla, y  `print()` escribe al `<py-terminal>`. 
+
+![alt text](./image-2.png)
+```
+    <py-config>
+        terminal = false
+    </py-config>
+```
+Por defecto py-terminal se muestra en pantalla al igual que su contenido, pero es posible configurarlo para que
+se muestre en consola.
+
+![alt text](./image-3.png)
+
+### Demo 3 - Leer archivos
+
+Esta acción se realiza en la etiqueta `py-config`
+
+
+- Importar un archivo y leer desde el otro directorio
+
+```
+    <py-config>
+        [[fetch]]
+        files = ['texto.txt']
+        from = 'file/'
+    </py-config>
+
+    <py-script>
+        text = 'Content: '
+        with open('texto.txt', 'r') as fp:
+            #print(fp.read())
+            for line in fp:
+                text += f"{line}"
+        
+        
+        display(HTML(f"<p>{text}</p>"))
+    </py-script>
+```
+
+- Importar un archivo y leer desde el mismo directorio
+
+```
+    <py-config>
+        [[fetch]]
+        files = ['texto2.txt']  
+    </py-config>
+
+    <py-script>
+        text2 = ''
+        with open('texto2.txt', 'r') as fp:
+            #print(fp.read())
+            for line in fp:
+                text2 += f"{line}"
+        
+        
+        display(HTML(f"<p>{text2}</p>"))
+    </py-script>
+```
+
+`HTML` esta funcion permite insertar etiquetas html junto con su contenido
+
+### Demo 4 - Importar archivos.py con funciones
+
+```
+<p id="date"></p>
+
+<py-config>
+
+    [[fetch]]
+    files = ['demo4.py'] 
+    from ="package"                                                                                                          
+</py-config>
+
+<py-script>
+
+    from demo4 import demo4, hello_world, date, show_params,console_message
+
+    print(demo4())
+
+    hello_world()
+
+    date()
+
+    show_params("<h2>Tutorial</h2>")
+
+    console_message("Pura vida!")
+
+</py-script>
+```

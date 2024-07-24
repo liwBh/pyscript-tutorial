@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width,initial-scale=1" />
+      <link rel="icon" href="./img/favicon.ico" />
+      <title>PyScript Demo 3</title>
+      <link rel="stylesheet" href="https://pyscript.net/releases/2022.12.1/pyscript.css">
+      <script type="module" src="https://pyscript.net/releases/2022.12.1/pyscript.js"></script>
+  </head>
+  <body>
+        <h1>Demo 3 - Leer archivo</h1>
+
+        <py-config>
+            [[fetch]]
+            files = ['texto.txt']
+            from = 'file/'
+
+            [[fetch]]
+            files = ['texto2.txt']                                                                                                                                                                                                                                                                          
+
+        </py-config>
+
+        <py-script>
+            text = 'Content: '
+            with open('texto.txt', 'r') as fp:
+                #print(fp.read())
+                for line in fp:
+                    text += f"{line}"
+            
+            
+            display(HTML(f"<p>{text}</p>"))
+
+
+            text2 = ''
+            with open('texto2.txt', 'r') as fp:
+                #print(fp.read())
+                for line in fp:
+                    text2 += f"{line}"
+            
+            
+            display(HTML(f"<p>{text2}</p>"))
+
+
+        </py-script>
+    
+  </body>
+</html>
+
+
