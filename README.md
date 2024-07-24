@@ -95,7 +95,7 @@ valor booleano, si su valor es true se agrega al contenido existen, si el valor 
 ```
 `display()` es para escribir en la pantalla, y  `print()` escribe al `<py-terminal>`. 
 
-![alt text](./image-2.png)
+![alt text](./img/image-2.png)
 ```
     <py-config>
         terminal = false
@@ -104,7 +104,7 @@ valor booleano, si su valor es true se agrega al contenido existen, si el valor 
 Por defecto py-terminal se muestra en pantalla al igual que su contenido, pero es posible configurarlo para que
 se muestre en consola.
 
-![alt text](./image-3.png)
+![alt text](./img/image-3.png)
 
 ### Demo 3 - Leer archivos
 
@@ -182,3 +182,13 @@ Esta acción se realiza en la etiqueta `py-config`
 
 </py-script>
 ```
+
+## PyScript 2024.7.1
+
+En esta version hay muchos cambios considerables
+
+- Cambio de tag para configurar y acceder a archivos
+```
+   <script type="py" src="./latest/main.py" config="./latest/pyscript.json"></script>
+```
+Se crea un archivo `main.py` donde escribiremos el codigo en python y otro archivo que contiene la configuracion `pyscript.json`
