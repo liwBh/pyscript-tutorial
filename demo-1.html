@@ -9,17 +9,22 @@
       <script type="module" src="https://pyscript.net/releases/2022.12.1/pyscript.js"></script>
   </head>
   <body>
-        <h1>Demo 1 - Insertando contenido</h1>
+      <h1>Demo 1 - Insertando contenido</h1>
 
-        <py-config>
-        </py-config>
+      <div id="output"></div>
+      <div id="output-2">My Name is: </div>
+      <div id="output-3">Country</div>
 
-        <py-script>
-            display("Hello", target="output")
-            display("World!", append=True,target="output")
-            display("Wilfredo", append=True,target="output-2")
-            display("Costa Rica", append=False,target="output-3")
-        </py-script>
+
+      <py-config>
+      </py-config>
+
+      <py-script>
+        display("Hello", target="output")
+        display("World!", append=True,target="output")
+        display("Wilfredo", append=True,target="output-2")
+        display("Costa Rica", append=False,target="output-3")
+      </py-script>
     
   </body>
 </html>

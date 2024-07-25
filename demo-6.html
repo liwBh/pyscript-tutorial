@@ -6,17 +6,10 @@
     <link rel="icon" href="./img/favicon.ico" />
     <title>Tutorial PyScript</title>
     <link rel="stylesheet" href="https://pyscript.net/releases/2024.7.1/core.css">
-    <script type="module" src="https://pyscript.net/releases/2024.7.1/core.js"></script>
+    <script type="module" src="https://pyscript.net/releases/2024.7.1/core.js" defer></script>
 
-    <style>
-        #loading { outline: none; border: none; background: transparent }
-    </style>
-
-    <script type="module">
-        const loading = document.getElementById('loading');
-        addEventListener('py:ready', () => loading.close());
-        loading.showModal();
-    </script>
+    <link rel="stylesheet" href="./altair/style.css">
+    <script type="module" src="./altair/scripts.js" defer></script>
   </head>
   <body>
     <dialog id="loading">
@@ -27,8 +20,6 @@
         <div id="altair"></div>
         <script type="py" src="./altair/main.py" config="./altair/pyscript.toml"></script>
     </section>
-
-
 
   </body>
 </html>
