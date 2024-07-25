@@ -7,6 +7,9 @@
 4. ["PyScript Ejemplos proyectos"](https://docs.pyscript.net/2024.7.1/examples/)
 5. ["PyScript comunidad"](https://discord.com/invite/HxvBtukrg2)
 6. ["PyScript Guía de usuario"](https://docs.pyscript.net/2024.7.1/user-guide/)
+7. ["PyScript Videos"](https://www.youtube.com/@CodingGlass/streams)
+
+
 
 
 ### Servir los archivos con un servidor HTTP
