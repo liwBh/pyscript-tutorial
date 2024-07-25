@@ -14,6 +14,8 @@
   python3 -m http.server
 ```
 
+![alt text](./img/image-4.png)
+
 ## PyScript 2022.12.1
 
 ### Demo 1 - Insertar contenido
